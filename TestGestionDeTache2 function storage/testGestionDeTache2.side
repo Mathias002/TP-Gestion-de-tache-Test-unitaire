@@ -1,0 +1,124 @@
+{
+  "id": "a398b020-11ef-4699-9a8b-d23e057348f0",
+  "version": "2.0",
+  "name": "testGestionDeTache2",
+  "url": "http://127.0.0.1:5500",
+  "tests": [{
+    "id": "6d0d04bd-7e7a-450d-977d-39e96b6d9e88",
+    "name": "Add and del task with func storage",
+    "commands": [{
+      "id": "865f177c-e99b-43a4-8ffb-690a8cc5c9e0",
+      "comment": "",
+      "command": "open",
+      "target": "/GestionDeTache2.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "951b0603-442d-41c8-a65c-37e3521a3f2a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "788x976",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11c516ec-122b-4338-ada6-87d42db68f25",
+      "comment": "",
+      "command": "click",
+      "target": "id=taskInput",
+      "targets": [
+        ["id=taskInput", "id"],
+        ["css=#taskInput", "css:finder"],
+        ["xpath=//input[@id='taskInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94af342c-f3c4-45c7-bfed-cb6c440a0b4e",
+      "comment": "",
+      "command": "type",
+      "target": "id=taskInput",
+      "targets": [
+        ["id=taskInput", "id"],
+        ["css=#taskInput", "css:finder"],
+        ["xpath=//input[@id='taskInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Task1"
+    }, {
+      "id": "5c054778-aa72-4476-aa89-fe0f9013e572",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='addTask()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f23b0b36-6923-45ab-b5d1-a7c70a6e8465",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.task-item",
+      "targets": [
+        ["css=.task-item", "css:finder"],
+        ["xpath=//div[@id='taskList']/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f783c237-b988-466b-bd66-c91aabf935da",
+      "comment": "reload window",
+      "command": "executeScript",
+      "target": "location.reload();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d82358ca-56f8-4acf-94e1-eee94e148895",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.task-item",
+      "targets": [
+        ["css=.task-item", "css:finder"],
+        ["xpath=//div[@id='taskList']/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98b0849c-b386-4597-a99b-b8215a890b17",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='removeTask(this)']", "xpath:attributes"],
+        ["xpath=//div[@id='taskList']/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Supprimer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5e50a61-2d40-4527-863d-3784c79cb2a8",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "css=.task-item",
+      "targets": [
+        ["css=.task-item", "css:finder"],
+        ["xpath=//div[@id='taskList']/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "328f6e4d-9628-43b7-8deb-527499488687",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6d0d04bd-7e7a-450d-977d-39e96b6d9e88"]
+  }],
+  "urls": ["http://127.0.0.1:5500/"],
+  "plugins": []
+}
